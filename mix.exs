@@ -23,7 +23,8 @@ defmodule Calculator.MixProject do
       {:phoenix, "~> 1.7.0"},
       {:phoenix_live_view, "~> 0.20.0"},
       {:plug_cowboy, "~> 2.5"},
-      {:plug, "~> 1.14"}
+      {:plug, "~> 1.14"},
+      {:jason, "~> 1.4"}
     ]
   end
 end

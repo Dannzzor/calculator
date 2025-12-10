@@ -16,6 +16,10 @@ defmodule Calculator.Endpoint do
     signing_salt: "calculator_signing_salt",
     encryption_salt: "calculator_encryption_salt"
 
+  socket "/live", Phoenix.LiveView.Socket,
+    websocket: true,
+    longpoll: false
+
   plug Plug.Static,
     at: "/css",
     from: Path.join([:code.priv_dir(:calculator), "static", "css"]),
