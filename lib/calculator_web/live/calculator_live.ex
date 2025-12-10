@@ -13,14 +13,14 @@ defmodule CalculatorWeb.CalculatorLive do
     {:ok, update_operation_display(socket)}
   end
 
-  def handle_event("number", %{"value" => value}, socket) do
+  def handle_event("number", %{"num" => num}, socket) do
     new_display = cond do
       socket.assigns.waiting_for_new_value || socket.assigns.just_calculated ->
-        value
+        num
       socket.assigns.display == "0" ->
-        value
+        num
       true ->
-        socket.assigns.display <> value
+        socket.assigns.display <> num
     end
 
     current_value = parse_number(new_display)
