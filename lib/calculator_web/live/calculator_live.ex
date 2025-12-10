@@ -77,7 +77,7 @@ defmodule CalculatorWeb.CalculatorLive do
   defp calculate(a, b, "add"), do: a + b
   defp calculate(a, b, "subtract"), do: a - b
   defp calculate(a, b, "multiply"), do: a * b
-  defp calculate(a, b, "divide"), do: if b == 0, do: 0, else: a / b
+  defp calculate(a, b, "divide"), do: if(b == 0, do: 0, else: a / b)
 
   defp parse_number(str) do
     case Float.parse(str) do

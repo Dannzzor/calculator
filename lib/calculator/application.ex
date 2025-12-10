@@ -4,7 +4,8 @@ defmodule Calculator.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Calculator.Router, options: [port: 4000]}
+      {Phoenix.PubSub, name: Calculator.PubSub},
+      Calculator.Endpoint
     ]
 
     opts = [strategy: :one_for_one, name: Calculator.Supervisor]

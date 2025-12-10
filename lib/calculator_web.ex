@@ -32,10 +32,16 @@ defmodule CalculatorWeb do
     end
   end
 
+  def view do
+    quote do
+      import Phoenix.HTML
+      unquote(view_helpers())
+    end
+  end
+
   defp view_helpers do
     quote do
-      use Phoenix.HTML
-
+      import Phoenix.HTML
       import Phoenix.LiveView.Helpers
 
       @doc """

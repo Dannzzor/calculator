@@ -1,5 +1,5 @@
 defmodule CalculatorWeb.LayoutView do
-  use CalculatorWeb, :view
+  use Phoenix.Component
 
   def render("live.html", assigns) do
     ~H"""
