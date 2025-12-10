@@ -1,0 +1,35 @@
+<div class="calculator-container">
+  <div class="calculator">
+    <div class="display-section">
+      <div class="operation-display">
+        <%= @operation_display %>
+      </div>
+      <div class="result-display"><%= @display %></div>
+    </div>
+    <div class="buttons">
+      <button phx-click="clear" class="button button-clear">C</button>
+      <button phx-click="backspace" class="button button-backspace">⌫</button>
+      <button phx-click="operation" phx-value-op="divide" class="button button-operator">÷</button>
+      <button phx-click="operation" phx-value-op="multiply" class="button button-operator">×</button>
+
+      <button phx-click="number" phx-value-value="7" class="button button-number">7</button>
+      <button phx-click="number" phx-value-value="8" class="button button-number">8</button>
+      <button phx-click="number" phx-value-value="9" class="button button-number">9</button>
+      <button phx-click="operation" phx-value-op="subtract" class="button button-operator">−</button>
+
+      <button phx-click="number" phx-value-value="4" class="button button-number">4</button>
+      <button phx-click="number" phx-value-value="5" class="button button-number">5</button>
+      <button phx-click="number" phx-value-value="6" class="button button-number">6</button>
+      <button phx-click="operation" phx-value-op="add" class="button button-operator">+</button>
+
+      <button phx-click="number" phx-value-value="1" class="button button-number">1</button>
+      <button phx-click="number" phx-value-value="2" class="button button-number">2</button>
+      <button phx-click="number" phx-value-value="3" class="button button-number">3</button>
+      <button phx-click="equals" class="button button-equals" style="grid-row: span 2;">=</button>
+
+      <button phx-click="number" phx-value-value="0" class="button button-number" style="grid-column: span 2;">0</button>
+      <button phx-click="decimal" class="button button-number">.</button>
+    </div>
+  </div>
+</div>
+
